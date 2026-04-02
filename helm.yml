@@ -1,0 +1,47 @@
+# HELM CACHE — auto-generated at /close, do not edit manually
+# source of truth: context/ files  |  this file: fast-read index for session start
+
+meta:
+  session: 0
+  last: null
+  mode_last: null
+
+map:
+  position: START
+  blocker: null
+  # Define your quest milestones here
+  # path_a: "Primary pathway"
+  # path_b: "Backup pathway"
+
+hunts:
+  # Critical path and active pursuits
+  # - id: EXAMPLE
+  #   state: active        # active / waiting / critical
+  #   label: "Description"
+  #   status: "Current state"
+  #   deadline: null
+
+farms:
+  # Systems to maintain
+  # - id: EXAMPLE
+  #   label: "System name"
+  #   last: null
+  balance:
+    - id: WAR_CHEST
+      label: "War chest"
+      current: 0
+      target: 0
+  clear:
+    # One-off tasks
+    # - task: "Description"
+    #   due: "YYYY-MM-DD"
+
+pinned:
+  # Load-bearing insights — copied from LOG.md PINNED section
+  # - item: "Description"
+  #   date: "YYYY-MM-DD"
+
+next_milestone:
+  name: null
+  trigger: null
+  reward: null
