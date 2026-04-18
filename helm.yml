@@ -4,6 +4,7 @@
 meta:
   session: 0
   last: null
+  last_sub: null
   mode_last: null
 
 map:
@@ -16,10 +17,11 @@ map:
 hunts:
   # Critical path and active pursuits
   # - id: EXAMPLE
-  #   state: active        # active / waiting / critical
+  #   state: active        # active / waiting / critical / hold
   #   label: "Description"
   #   status: "Current state"
   #   deadline: null
+  #   consequence: "What blocks if this misses"
 
 farms:
   # Systems to maintain
@@ -36,10 +38,35 @@ farms:
     # - task: "Description"
     #   due: "YYYY-MM-DD"
 
+modes:
+  # Mode tracking — activates when conversation enters the domain
+  # emotional:   # protocol: THERAPIST.md · context: PERSON.md
+  #   state: "inactive"
+  #   last_session: null
+  # fitness:     # protocol: COACH.md · context: ATHLETE.md
+  #   state: "inactive"
+  #   phase: null
+  #   current_milestone: null
+  #   last_session: null
+  # capitalist:  # protocol: CAPITALIST.md · context: WEALTH.md
+  #   state: "inactive"
+  #   phase: null
+  #   last_session: null
+
 pinned:
-  # Load-bearing insights — copied from LOG.md PINNED section
-  # - item: "Description"
-  #   date: "YYYY-MM-DD"
+  # Compressed format: ID + one-line summary. Full text in LOG.md PINNED section.
+  # Max 12 active. Lifecycle: 5 sessions without change → dormant. 3 more → archive.
+  # - id: EXAMPLE
+  #   summary: "Load-bearing insight in one line"
+  #   pinned_at: 0
+
+read_map:
+  always: [helm.yml]
+  emotional: [context/PERSON.md, protocols/THERAPIST.md]
+  fitness: [context/ATHLETE.md, protocols/COACH.md]
+  capitalist: [context/WEALTH.md, protocols/CAPITALIST.md]
+  strategic: [context/PLAN.md, context/GOALS.md]
+  blind: [context/PERSON.md]
 
 next_milestone:
   name: null
